@@ -1,0 +1,151 @@
+/*This is a separate style sheet for my gallery pages because they have a different layout*/
+h1.gallerymain {/*This is for my main gallery heading*/
+	text-align: center;
+	font-size: 3rem;
+}
+
+h4.gallerymain {/*This is for my about Chewy section*/
+	padding: 10px 30px;
+	max-width: 1000px;
+}
+
+.tile {
+	margin: auto;
+	padding: 5px;
+}
+
+.gallerytile {
+	position: relative;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	overflow: hidden;
+
+}
+
+.gallerytile img {
+	padding-top: 20px;
+	width: auto;
+	height: 300px;
+	max-height: 300px;
+}
+
+.likebutton {/**/
+	border-radius: 8px;
+	background: #f0f8ff;
+	color: #4682b4;
+	font-weight: bold;
+	display: flex;
+	margin: auto;
+	width: auto;
+	cursor: pointer;
+}
+
+.icon {
+	padding: 5px 10px;
+	margin: auto;
+	font-size: 1.2rem;
+}
+
+.factHeading{
+	clear: both;
+	margin: auto;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	max-width: 800px;
+}
+
+#api-facts{
+	border-bottom: 2px solid #fff;
+}
+
+#api-facts h4 {
+	text-align: center;
+	padding: 20px;
+	max-width: 800px;
+	margin: auto;
+}
+
+#imagePreview{/*targets javascript text insert for file validation*/
+	text-align: center;
+}
+
+#imagePreview img{/* targets javascript image from file validation */
+	position: relative;
+	display: flex;
+	margin: auto;
+	padding: 15px;
+	width: 30%;
+}
+
+@media screen and (min-width: 1550px) {/*This media query is for large screens and will display 6 images per row 100/6 = 16.6*/
+	.col-md-2 {
+		float: left;
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 1549px) {/*This media query is for medium devices(tablets) and will display 3 images per row in the gallery 100/3 = 33.3*/
+	.col-sm-4 {
+		float: left;
+		width: 50%;
+	}
+
+	.gallerytile img{
+		height: 500px;
+	}
+}
+
+@media screen and (max-width: 1100px) {/*This media query is for small devices(phones) and will display 2 images per row in the gallery*/
+	.col-xs-6 {
+		float: left;
+		width: 100%;
+	}
+}
+
+.submissions {/*This is for my post your pups submission form*/
+	clear: both;/*clears the floated elements*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;/*centers the submission form at the bottom of the gallery pages*/
+}
+
+.submissions form {
+	background: #6699CC;/*sets the color of form*/
+	position: relative;
+	max-width: 350px;/*makes form flexible for smaller screens*/
+	border-radius: 8px;/*gives form a nice radius*/
+	margin: 30px auto;/*30px top and bottom margin, auto for each side means the form will center itself on the page*/
+	text-align: center;/*centers "Post your pups"*/
+}
+
+.submissions h2 {/*padding for h2 element*/
+	padding: 10px;
+}
+
+.submissions input[name="text"] {/*form textbox*/
+	background: #fff;/*sets textbox background to white*/
+	text-align: center;/*centers text in textbox*/
+	color: #141414;/*text color to black*/
+	width: 320px;/*width of textbox*/
+	height: 50px;/*height of textbox*/
+	margin-top: 15px;/*sets a 15px margin so textbox isn't too close to choose file option*/
+}
+
+.submissions input[name="image"] {/*choose file button*/
+	display: flex;
+	margin: auto;/*centers choose file option*/
+	color: #141414;/*Sets text to black*/
+	width: 180px;/*Sets width of choose file option*/
+	height: auto;
+	margin-top: 15px;
+}
+
+.submissions button {/*Send button for submission*/
+	width: 60px;
+	padding: 5px;
+	margin: 10px;
+}
+
